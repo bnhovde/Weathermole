@@ -1,0 +1,68 @@
+/* ============================================================================
+MODULES -> FORECAST DETAILS
+========================================================================= */
+
+/**
+ * Forecast box
+ */
+ 
+.forecast-details {
+    
+    position: fixed;
+    top: rem(70);
+    right: rem($shell-g-spacing-base);
+    bottom: rem(60);
+    left: rem($shell-g-spacing-base);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+    
+    @include breakpoint('teen-bear'){
+        top: auto;
+        bottom: 0;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+        background-color: transparent;
+        overflow: visible;
+    }
+
+    /**
+    * Elements
+    */
+    
+    &__item {
+        flex-grow: 1;
+        position: relative;
+        width: 25%;
+        height: 33.3%;
+        opacity: 1;
+        transition: all 0.3s ease;
+
+        @for $i from 1 through 10 {
+            &:nth-child(#{$i}) { 
+                transition-delay: 0.01s * $i; 
+            }
+        }
+        
+         @include breakpoint('teen-bear'){
+            width: auto;
+            height: auto;
+         }
+    }
+
+    /**
+    * Animations
+    */
+    
+    &--none {
+        background-color: transparent;
+        
+        .forecast-details__item {
+            transform: translateY(400px);
+            opacity: 0;
+            transition-delay: 0s !important;
+        }
+    }
+    
+}

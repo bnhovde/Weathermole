@@ -1,0 +1,28 @@
+/* ============================================================================
+   MODULES -> NAV
+   ========================================================================= */
+
+/**
+ * Main nav component
+ */
+ 
+.navbar {
+
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem($shell-g-spacing-small) rem($shell-g-spacing-large);
+    
+    /**
+    * Elements
+    */
+    
+    &__title {
+        font-size: rem(30);
+        font-weight: $shell-g-font-weight-light;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+}

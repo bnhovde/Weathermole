@@ -1,0 +1,33 @@
+/* ============================================================================
+   BASE
+   ========================================================================= */
+   
+   /**
+ * Here we provide very basic styling that most UI's will need. These styles
+ * are applied at the most global level being applied via element selectors.
+ * Everything in Base needs to be easily overridden which is really easy to do
+ * as everything in Base sits right at the bottom in terms of specificity.
+ *
+ * Some of this styling builds on top of Shell's "Base".
+ *
+ * CONTENTS:
+ *
+ * 1. Root element
+ */
+
+
+
+/* 1. Root element
+   ========================================================================= */
+
+/**
+ * Site-wide styling
+ */
+ 
+ html {
+     font-weight: $shell-g-font-weight-light;
+ }
+ 
+ a {
+     text-decoration: none;
+ }

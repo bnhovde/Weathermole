@@ -1,0 +1,47 @@
+/* ============================================================================
+   MODULES -> SEARCH
+   ========================================================================= */
+   
+.search {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: rem($shell-g-spacing-large);
+
+    /**
+    * Elements
+    */
+    
+    &__inner {
+        position: relative;
+    }
+    &__input {
+        max-width: 400px;
+        margin: 0;
+        padding: rem($shell-g-spacing-x-small) rem($shell-g-spacing-base);
+        font-size: rem(20);
+        font-weight: $shell-g-font-weight-normal;
+        color: $g-color-text;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 5px solid $g-color-sun;
+        
+        @include breakpoint('teen-bear'){
+            font-size: rem(45);
+        }
+        
+        &::-webkit-input-placeholder {
+            color: white;
+        }
+    }
+    
+    &__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+}

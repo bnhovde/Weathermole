@@ -1,0 +1,3 @@
+<FilesMatch .php$>
+    SetHandler php56-cgi
+</FilesMatch>

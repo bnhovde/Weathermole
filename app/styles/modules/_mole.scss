@@ -1,0 +1,57 @@
+/* ============================================================================
+   MODULES -> MOLE
+   ========================================================================= */
+
+/**
+ * The weathermole itself!
+ */
+ 
+.mole {
+    position: absolute;
+    right: rem(20);
+    bottom: -10px;
+        
+    /**
+    * Elements
+    */
+    
+    &__hand {
+        position: absolute;
+        bottom: 5px;
+        transform-origin: 100% 100%;
+        
+        animation-name: point;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+    }
+}
+
+
+/**
+ * Animations
+ */
+
+.mole-appear {
+    transform: translateY(200px);
+    transition: transform .6s ease;
+    
+    .mole__hand {
+        transform: rotate(-55deg);
+        transition: transform .6s ease;
+    }
+}
+
+.mole-appear.mole-appear-active {
+    transform: translateY(0px);
+    
+    .mole__hand {
+        transform: rotate(0);
+    }
+}
+
+@keyframes point {
+    0%   {transform: translate3d(0px, 0px, 0);}
+    50%  {transform: translate3d(10px, 10px, 0)}
+    100% {transform: translate3d(0px, 0px, 0);}
+}

@@ -1,0 +1,49 @@
+/* ============================================================================
+   MODULES -> ICON
+   ========================================================================= */
+
+/**
+ * icon component
+ */
+
+.icon {
+	display: inline-block;
+	fill: white;
+    
+    /**
+    * Variants
+    *
+    * clear-day, clear-night, rain, snow, sleet, wind, 
+    * fog, cloudy, partly-cloudy-day, or partly-cloudy-night
+    */
+    
+    &--small {
+        width: 30px;
+        height: 30px;
+        
+        @include breakpoint('teen-bear'){
+            width: 40px;
+            height: 40px;
+        }
+    }
+    
+    &--medium {
+        width: 60px;
+        height: 60px;
+        
+        @include breakpoint('teen-bear'){
+            width: 70px;
+            height: 70px
+        }
+    }
+    
+    &--large {
+        width: 120px;
+        height: 120px;
+        
+        @include breakpoint('short-bear'){
+            width: 220px;
+            height: 220px;
+        }
+    }
+}

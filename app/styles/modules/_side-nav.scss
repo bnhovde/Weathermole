@@ -1,0 +1,46 @@
+/* ============================================================================
+   MODULES -> side-nav
+   ========================================================================= */
+
+/**
+ * side-nav component
+ */
+
+.side-nav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+      
+    @include breakpoint('teen-bear'){
+        top: 0;
+        left: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /**
+    * Elements
+    */
+    
+    &__btn {
+        padding: rem($shell-g-spacing-base) rem($shell-g-spacing-large);
+    }
+    
+    
+    /**
+    * Variants
+    */
+     
+    &--day .side-nav__btn--day svg {
+        fill: $g-color-sun;
+    }
+    
+    &--week .side-nav__btn--week svg {
+        fill: $g-color-sun;
+    }
+}

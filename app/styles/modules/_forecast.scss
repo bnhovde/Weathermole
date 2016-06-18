@@ -1,0 +1,108 @@
+/* ============================================================================
+MODULES -> FORECAST
+========================================================================= */
+
+/**
+ * Forecast box
+ */
+ 
+.forecast {
+    
+    /**
+    * Elements
+    */
+    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: all .4s ease;
+            
+        @include breakpoint('teen-bear'){
+            flex-direction: row;
+            text-align: left;
+        }
+    
+    }
+    
+    &__icon {
+        > svg { fill: $g-color-sun; }
+        
+        @include breakpoint('teen-bear'){ margin-right: rem(20); }
+    }
+    
+    &__time {
+        font-size: rem(30);
+    }
+    
+    &__location {
+        font-size: rem(50);
+        line-height: 0.9;
+        text-transform: capitalize;
+    }
+    
+    &__temp {
+        
+        font-size: rem(90);
+        font-weight: $shell-g-font-weight-heavy;
+        line-height: 1.1;
+        letter-spacing: 5px;
+    
+        &:after {
+            content: "\203A";
+            display: inline-block;
+            font-family: "weather-icons";
+            font-size: rem(100);
+            line-height: rem(50);
+        }
+    }
+    
+    
+
+    /**
+    * Variants
+    */
+     
+    &--day { background-color: $g-color-day; }
+    &--night { background-color: $g-color-night; }
+    &--dusk { background-color: $g-color-dusk; }
+    
+    &--expanded { 
+        .forecast__inner {
+            opacity: 0.1;
+            @include breakpoint('teen-bear'){
+                opacity: 1;
+                transform: translateY(-70px);
+            }
+        }
+    }
+}
+
+
+/**
+ * Animations
+ */
+ 
+.forecast-animation-enter {
+    transform: translateY(300px);
+    opacity: 0;
+}
+
+.forecast-animation-enter.forecast-animation-enter-active {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all .4s ease;
+}
+
+.forecast-animation-leave {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.forecast-animation-leave.forecast-animation-leave-active {
+    transform: translateY(-300px);
+    opacity: 0;
+    transition: all .4s ease;
+}

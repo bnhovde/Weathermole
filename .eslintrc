@@ -1,0 +1,6 @@
+{
+    "extends": "madewithlove",
+    "rules": {
+        // "override": "any-rule-here"
+    }
+}

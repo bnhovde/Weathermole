@@ -1,0 +1,116 @@
+
+/* ============================================================================
+   SETTINGS
+   ========================================================================= */
+
+/**
+ * All global settings (Sass variables) and any Shell library setting
+ * overrides.
+ *
+ * The project settings can use any of the Shell library settings, like so:
+ *
+   $g-color-code-block-background: $shell-g-color-white;
+ *
+ * ---------------------------------------------------------------------------
+ *
+ * All settings start with a global namespace: `$g` followed by one hyphen,
+ * like this:
+ *
+   $g-;
+ *
+ * The "g" stands for "global".
+ *
+ * ----------------------------------------------------------------------------
+ *
+ * CONTENTS:
+ *
+ * 1. Colours
+ * 2. Typography
+ * 3. Shell overrides
+ * 4. Font loaders
+ */
+
+
+/* 1. Colours  
+   ========================================================================= */
+
+/**
+ * Brand.
+ */
+$g-color-text: white;
+$g-color-dusk: #3C3F87;
+$g-color-night: #131829;
+$g-color-day: #719ED9;
+$g-color-sun: #FCEE21;
+
+
+/**
+ * Text.
+ */
+
+// Base
+$shell-g-color-text-base: $g-color-text;
+
+// Subtle
+$g-color-subtle: rgba($shell-g-color-text-base, 0.6);
+
+/**
+ * Links.
+ */
+
+$shell-g-color-link: $g-color-text;
+$shell-g-color-link-hover: $g-color-subtle;
+
+
+/* 3. Shell overrides
+   ========================================================================= */
+   
+/**
+ * Baseline number.
+ */
+
+$shell-g-base-number: 16;
+
+   
+/**
+ * Container gutter.
+ */
+
+$shell-container-gutter: $shell-g-base-number;
+
+/**
+ * Container (Local).
+ */
+
+$shell-container-maximum-width: 660px + ($shell-container-gutter * 2);
+$shell-container-maximum-width-large: 1090px + ($shell-container-gutter * 2);
+
+/**
+ * Background color (Global).
+ */
+ 
+$shell-base-root-element-background-color: $g-color-night;
+
+/**
+ * Typography (Global).
+ */
+
+$g-font-family-base: 'Roboto', sans-serif;
+$shell-g-font-family-base: $g-font-family-base;
+$shell-g-font-weight-light: 100;
+$shell-g-font-weight-normal: 300;
+$shell-g-font-weight-heavy: 400;
+$shell-g-font-size-heading: $shell-g-base-number * 1.2;
+$shell-g-font-size-heading-large: $shell-g-font-size-heading + 13;
+$shell-g-font-size-heading-huge: $shell-g-font-size-heading + 16;
+
+
+
+@font-face {
+    font-family: 'weather-icons';
+    src: url('/assets/fonts/artill_clean_icons.woff2') format('woff2'),
+         url('/assets/fonts/artill_clean_icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

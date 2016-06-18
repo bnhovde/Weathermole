@@ -1,0 +1,39 @@
+/* ============================================================================
+MODULES -> LOADER
+========================================================================= */
+
+/**
+ * loader component
+ */
+
+.loader {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    > svg {
+        animation: loader 2s infinite linear;
+    }
+    
+
+    /**
+    * Animations
+    */
+    
+    // &--loading {
+    //     opacity: 1;
+    // }
+    
+    // &--loaded {
+    //     transform: translateY(-300px);
+    //     opacity: 0;
+    //     transition: all .4s ease;
+    // }
+}
+
+
+@keyframes loader {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

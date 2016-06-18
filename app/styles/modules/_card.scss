@@ -1,0 +1,42 @@
+/* ============================================================================
+   MODULES -> CARD
+   ========================================================================= */
+   
+.card {
+    
+    display: flex;
+    align-items: center;
+    padding: rem($shell-g-spacing-x-small) 0 rem($shell-g-spacing-x-small) 0;
+    flex-direction: column;
+    flex-grow: 1;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.1);
+    
+    @include breakpoint('teen-bear'){
+        padding: rem($shell-g-spacing-small) 0 rem($shell-g-spacing-large) 0;
+    }
+  
+    /**
+    * Elements
+    */
+    
+    &__header {
+        font-size: rem(13);
+    }
+    
+    &__icon {
+        @include breakpoint('teen-bear'){
+            margin: rem($shell-g-spacing-small) 0;
+        }
+    }
+    
+    &__footer {
+        font-size: rem(23);
+        font-weight: $shell-g-font-weight-normal;
+    }
+    
+    /**
+    * Variants
+    */
+
+}
